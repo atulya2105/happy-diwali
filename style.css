@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+body {
+    margin: 0;
+    padding: 0;
+    background: orange;
+    overflow: hidden;
+    background-image:url(https://i1.wp.com/heartoftherockiesradio.com/wp-content/uploads/2020/06/fireworks.gif?fit=860%2C460&ssl=1);
+
+}
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 350px;
+    background: purple;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0px 20px 100px rgba(0,0,0,.5);
+}
+.circle:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 8px dotted #fff;
+    box-sizing: border-box;
+    border-radius: 50%;
+    transform: scale(1.0);
+    animation: rotate 30s linear infinite;
+}
+.light {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 190px;
+    height: 90px;
+    background: brown;
+    border-bottom-left-radius: 120px;
+    border-bottom-right-radius: 120px;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 25px rgba(0,0,0,.5);
+}
+.light:before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 75px;
+    width: 30px;
+    height: 70px;
+    background: #ff0;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    transform-origin: bottom right;
+    filter: blur(2px);
+    animation: animate 5s linear infinite;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(30deg);
+        box-shadow: 0 0 30px #ff0;
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    75% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(30deg);
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: scale(1.1) rotate(0deg);
+    }
+    100% {
+        transform: scale(1.1) rotate(360deg);
+    }
+}
+h1 {
+    font-family: cursive;
+    margin: 40px 0 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    line-height: 60px;
+    text-shadow: 0px 15px 5px rgba(0,0,0,.2);
+    animation: sec 2s infinite;
+}
+h1 span {
+    font-size: 70px;
+    font-family: 'Kaushan Script', cursive;
+    animation: sec 2s infinite;
+}
+@keyframes sec {
+   0%{
+      color: coral;
+     }    
+  10%{
+     color: magenta;
+     }    
+  20%{
+     color: red;
+     letter-spacing: 3px;
+     }
+  40%{
+     color: gold;
+     }
+  60%{
+     color: lime;
+     }
+  85%{
+     letter-spacing: 5px;
+     }
+ 100%{
+     color: marine;
+     }
+ 100%{
+     color: tomato;
+     }
+}
+
+
+footer{
+    align-items: baseline;
+    text-align: center;
+    justify-content: last baseline;
+    font-size: large;
+    text-decoration:solid;
+    font-style: italic;
+    margin-top: 100%;
+}
+
+@media  screen and (max-width:480px) {
+   body{
+       position:sticky
+   }
+}

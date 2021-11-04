@@ -1,0 +1,1 @@
+alert("May the Deepavali season bring you joy. Happy Diwali ");
